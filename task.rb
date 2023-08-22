@@ -9,8 +9,9 @@ def sum_of_cubes(a, b)
   end
   
   
+  
   result = sum_of_cubes(1, 3)
-  puts result
+puts "Sum of cubes: #{result}\n"
 
 ###################  2.Given an Array, return the elements that are present exactly once in the array. You need to write a method called non_duplicated_values to accomplish this task. Example: Given [1,2,2,3,3,4,5], the method should return [1,4,5]
 
@@ -28,8 +29,13 @@ end
 
 arr = [1, 2, 2, 3, 3, 4, 5, 6, 6]
 result = non_duplicated_values(arr)
-puts result.inspect
 
+
+puts "Original array:"
+puts arr.inspect
+
+puts "\nElements that appear exactly once:"
+puts result.inspect
   ###################  3.Given a sentence, return true if the sentence is a palindrome. You are supposed to write a method palindrome? to accomplish this task. 
 # Note: Ignore whitespace and cases of characters. Example: Given ""Never odd or even"" the method should return true.
 
@@ -42,7 +48,8 @@ puts result.inspect
   
   sentence = "Never odd or even"
   result = palindrome?(sentence)
-  puts result 
+
+puts "Is the sentence a palindrome? #{result}"
   
 #########################  4. is a Kaprekar number since 9 ^ 2 = 81 and 8 + 1 = 9, 297 is also Kaprekar number since 297 ^ 2 = 88209 and 88 + 209 = 297. In short, for a Kaprekar number k with n-digits, if you square it and add the right n digits to the left n or n-1 digits, the resultant sum is k. Find if a given number is a Kaprekar number.
 def kaprekar_number?(num)
@@ -59,26 +66,26 @@ def kaprekar_number?(num)
   end
   
   # Test cases
-  puts kaprekar_number?(9)   
-  puts kaprekar_number?(297) 
-  puts kaprekar_number?(45)
+  puts "Is 9 a Kaprekar number? #{kaprekar_number?(9)}"
+  puts "Is 297 a Kaprekar number? #{kaprekar_number?(297)}"
+  puts "Is 45 a Kaprekar number? #{kaprekar_number?(45)}"
 
 #########################  5.Assignment
 # Print "12th Jan 2012":
 require 'date'
 
 current_date=Date.today
-puts current_date
+puts "Current Date: #{current_date}"
 #Print "12th Jan 2012":
 date = Date.new(2012, 1, 12)
-puts date.strftime("%d %b %Y")
+puts "Formatted Date: #{date.strftime("%d %b %Y")}"
 
 
 #Add 7 days to the current date:
 
 current_date = Date.today
 future_date = current_date + 7
-puts future_date
+puts "Date 7 days from now: #{future_date}"
 
 #Compare two dates and calculate the days between them:
 
@@ -87,19 +94,19 @@ date1 = Date.new(2010, 4, 12)
 date2 = Date.new(2011, 5, 12)
 
 days_difference = (date2 - date1).to_i
-puts days_difference
+puts "Days Difference: #{days_difference}"
 
 
 # Print the date after 20 days from the current date:
 current_date =Date.today
 after_date = current_date + 20
-puts after_date
+puts "Date 20 days from now: #{after_date}"
 
 # Date in array format
 
 current_date = Date.today
 date_array = [current_date.year, current_date.month, current_date.day]
-puts date_array.inspect
+puts "Date Array: #{date_array.inspect}"
 #########################  6.Print prime numbers from the given array
 
 def is_prime?(number)
